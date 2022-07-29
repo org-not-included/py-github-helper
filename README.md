@@ -33,9 +33,9 @@ git commit -m "commit for demo purposes"
 git push --set-upstream origin new_branch
 ```
 5. Open a Pull request
-![Open PR](img/open_pr.mov)
+![Open PR](img/open_pr.gif)
 6. Create a PAT (and save it somewhere)
-![Generate PAT](img/generate_pat.mov)
+![Generate PAT](img/generate_pat.gif)
 7. Test out the `make_api_call.py` script:
 ```text
 python3 helpers/make_api_call.py \
