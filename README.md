@@ -8,6 +8,23 @@ python3 helpers/make_api_call.py \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
 
+
+## Quick start
+1. Clone this repo
+```
+git clone https://github.com/org-not-included/github_api
+cd github_api
+```
+2. Create a new Github repo to test it against
+```
+git remote remove origin
+git remote add origin git@github.com:$(git config user.name)/sample-repo.git
+
+```
+3. Go to http://127.0.0.1:8000/ in your web-browser.
+
+---
+
 ## Docs
 ```shell
 python3 helpers/make_api_call.py --help
