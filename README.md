@@ -8,6 +8,44 @@ python3 helpers/make_api_call.py \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
 
+
+## Quick start
+1. Clone this repo
+```
+git clone https://github.com/org-not-included/github_api
+cd github_api
+```
+2. Create a new [Github repo](https://github.com/new)
+3. Push this code to the new repository.
+```
+git remote remove origin
+git remote add origin https://github.com/$(git config user.name)/sample-repo.git
+git add .
+git commit -m "initial commit"
+git push -u origin main 
+```
+4. Create a new branch (and push it to Github)
+```text
+git checkout -b new_branch
+echo "some sample text" > test.txt
+git add test.txt
+git commit -m "commit for demo purposes"
+git push --set-upstream origin new_branch
+```
+5. Open a Pull request
+![Open PR](https://github.com/org-not-included/github_api/img/open_pr.mov)
+6. Create a PAT (and save it somewhere)
+![Generate PAT](https://github.com/org-not-included/github_api/img/generate_pat.mov)
+7. Test out the `make_api_call.py` script:
+```text
+python3 helpers/make_api_call.py \
+        -t $MY_PAT -o $(git config user.name) -r sample-repo -l 1 -c add_comment \
+        -e '{"message": "This message was successfully posted via gitub_api."}'
+```
+![Comment on PR](https://github.com/org-not-included/github_api/img/pr_comment.png)
+
+---
+
 ## Docs
 ```shell
 python3 helpers/make_api_call.py --help
