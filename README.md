@@ -15,10 +15,15 @@ python3 helpers/make_api_call.py \
 git clone https://github.com/org-not-included/github_api
 cd github_api
 ```
-2. Create a new Github repo to test it against
+2. Create a new [Github repo](https://github.com/new)
+3. Change this repo to point at new repo
 ```
 git remote remove origin
 git remote add origin git@github.com:$(git config user.name)/sample-repo.git
+cat "test" > test.txt
+git add .
+git commit -m "initial commit"
+git push -u origin main 
 
 ```
 3. Go to http://127.0.0.1:8000/ in your web-browser.
