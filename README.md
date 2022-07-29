@@ -19,7 +19,7 @@ cd github_api
 3. Change this repo to point at new repo
 ```
 git remote remove origin
-git remote add origin git@github.com:$(git config user.name)/sample-repo.git
+git remote add origin https://github.com/$(git config user.name)/sample-repo.git
 cat "test" > test.txt
 git add .
 git commit -m "initial commit"
