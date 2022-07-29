@@ -33,16 +33,16 @@ git commit -m "commit for demo purposes"
 git push --set-upstream origin new_branch
 ```
 5. Open a Pull request
-![Open PR](https://github.com/org-not-included/github_api/img/open_pr.mov)
+![Open PR](img/open_pr.mov)
 6. Create a PAT (and save it somewhere)
-![Generate PAT](https://github.com/org-not-included/github_api/img/generate_pat.mov)
+![Generate PAT](img/generate_pat.mov)
 7. Test out the `make_api_call.py` script:
 ```text
 python3 helpers/make_api_call.py \
         -t $MY_PAT -o $(git config user.name) -r sample-repo -l 1 -c add_comment \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
-![Comment on PR](https://github.com/org-not-included/github_api/img/pr_comment.png)
+![Comment on PR](img/pr_comment.png)
 
 ---
 
