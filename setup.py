@@ -10,6 +10,7 @@ long_description = (this_directory / "README.md").read_text()
 setup(
     name="py-github-helper",
     version=VERSION,
+    homepage="https://github.com/org-not-included/py-github-helper/",
     author="mtsadler (Mike Sadler)",
     author_email="<michaeltsadler1@gmail.com>",
     description=DESCRIPTION,
