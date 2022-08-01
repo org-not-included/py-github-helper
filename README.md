@@ -10,21 +10,24 @@ python3 py-github-helper/make_api_call.py \
 
 
 ## Quick start
-1. Clone this repo
+1. Create a new [Github repo](https://github.com/new).
+2. Create a local folder and push it to the new repository.
 ```
-git clone https://github.com/org-not-included/github_api
-cd github_api
-```
-2. Create a new [Github repo](https://github.com/new)
-3. Push this code to the new repository.
-```
-git remote remove origin
+mkdir sample-repo
+cd sample-repo
+echo "# dummy" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
 git remote add origin https://github.com/$(git config user.name)/sample-repo.git
-git add .
-git commit -m "initial commit"
 git push -u origin main 
 ```
-4. Create a new branch (and push it to Github)
+3. Install this PyPi package.
+```
+pip install py-github-helper
+```
+4. Create a new branch (and push it to Github).
 ```text
 git checkout -b new_branch
 echo "some sample text" > test.txt
@@ -36,9 +39,9 @@ git push --set-upstream origin new_branch
 ![Open PR](img/open_pr.gif)
 6. Create a PAT (and save it somewhere)  
 ![Generate PAT](img/generate_pat.gif)
-7. Test out the `make_api_call.py` script:
+7. Test out `py-github-helper`:
 ```text
-python3 github_api/make_api_call.py \
+py-github-helper \
         -t $MY_PAT -o $(git config user.name) -r sample-repo -l 1 -c add_comment \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
@@ -48,12 +51,12 @@ python3 github_api/make_api_call.py \
 
 ## Docs
 ```shell
-python3 py-github-helper/make_api_call.py --help
+py-github-helper --help
 ```
 
 
 ```text
-usage: github_api_call [-h] [-o ORGANIZATION] [-r REPOSITORY] [-t TOKEN] [-u USERNAME] [-p PASSWORD] [-l PULL_REQUEST_ID] [-c COMMAND] [-e EXTRAS]
+usage: py-github-helper [-h] [-o ORGANIZATION] [-r REPOSITORY] [-t TOKEN] [-u USERNAME] [-p PASSWORD] [-l PULL_REQUEST_ID] [-c COMMAND] [-e EXTRAS]
 
 A python script that handles GitHub API calls.
 
@@ -77,7 +80,7 @@ optional arguments:
                         Extra dictionary to allow for more arguments.
 
 Expected Syntax:
-        python3 github_api_call.py -o <Organization Name> -r <Repository> -t <O-Auth Token> -u <Github username> -p <Github password> -l <PR Number> -c <Github API Command> -e '{"x": "sample", "y": 5, "z": "test}'
+        py-github-helper -o <Organization Name> -r <Repository> -t <O-Auth Token> -u <Github username> -p <Github password> -l <PR Number> -c <Github API Command> -e '{"x": "sample", "y": 5, "z": "test}'
 
 Available Commands:
 

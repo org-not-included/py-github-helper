@@ -1,4 +1,5 @@
-from commands import *
+from .commands import *
+
 
 def parse_args(argv):
     """
@@ -7,7 +8,7 @@ def parse_args(argv):
     On error: prints expected syntax, list of commands, and error details.
     """
     parser = argparse.ArgumentParser(
-        prog="github_api_call",
+        prog="py-github-helper",
         formatter_class=argparse.RawTextHelpFormatter,
         description="A python script that handles GitHub API calls.",
         epilog=format_epilog(),
@@ -56,5 +57,3 @@ def parse_args(argv):
     logging.info("\n\n\n")
 
     return globals()[args.command](**parameters)
-
-

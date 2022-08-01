@@ -1,13 +1,13 @@
 import logging
 import requests
 import pendulum
-from util import *
+
+from .util import *
+
 
 ######################
 #   HELPER COMMANDS  #
 ######################
-
-
 def get_issue_close_date(
         issue,
         organization,
