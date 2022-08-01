@@ -63,7 +63,7 @@ available_commands = {
         "Required parameters: organization, repository, token, extras[head, base, title]",
     ],
 }
-command_template = 'Expected Syntax:\n\tpy-github-helper -o <Organization Name> -r <Repository> -t <O-Auth Token> -u <Github username> -p <Github password> -l <PR Number> -c <Github API Command> -e \'{"x": "sample", "y": 5, "z": "test}\'\n'
+command_template = 'Expected Syntax:\n\tpython3 -m py-github-helper -o <Organization Name> -r <Repository> -t <O-Auth Token> -u <Github username> -p <Github password> -l <PR Number> -c <Github API Command> -e \'{"x": "sample", "y": 5, "z": "test}\'\n'
 
 
 ######################

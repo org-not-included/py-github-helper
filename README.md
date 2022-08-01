@@ -3,15 +3,14 @@ Python Script for interacting with Github API.
 
 ## Example
 ```shell
-python3 py-github-helper/make_api_call.py \
-        -t $GH_TOKEN -o org-not-included -r py-github-helper -l 1 -c add_comment \
+python3 -m py-github-helper \
+        -t $GH_TOKEN -o org-not-included -r sample-repo -l 1 -c add_comment \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
 
-
 ## Quick start
 1. Create a new [Github repo](https://github.com/new).
-2. Create a local folder and push it to the new repository.
+2. Create a local folder and push it to the new repository:
 ```
 mkdir sample-repo
 cd sample-repo
@@ -23,11 +22,11 @@ git branch -M main
 git remote add origin https://github.com/$(git config user.name)/sample-repo.git
 git push -u origin main 
 ```
-3. Install this PyPi package.
+3. Install this PyPi package:
 ```
 pip install py-github-helper
 ```
-4. Create a new branch (and push it to Github).
+4. Create a new branch (and push it to Github):
 ```text
 git checkout -b new_branch
 echo "some sample text" > test.txt
@@ -35,13 +34,13 @@ git add test.txt
 git commit -m "commit for demo purposes"
 git push --set-upstream origin new_branch
 ```
-5. Open a Pull request  
+5. Open a Pull request:
 ![Open PR](img/open_pr.gif)
-6. Create a PAT (and save it somewhere)  
+6. Create a PAT (and save it somewhere):
 ![Generate PAT](img/generate_pat.gif)
 7. Test out `py-github-helper`:
 ```text
-py-github-helper \
+python3 -m py-github-helper \
         -t $MY_PAT -o $(git config user.name) -r sample-repo -l 1 -c add_comment \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
@@ -51,12 +50,12 @@ py-github-helper \
 
 ## Docs
 ```shell
-py-github-helper --help
+python3 -m py-github-helper --help
 ```
 
 
 ```text
-usage: py-github-helper [-h] [-o ORGANIZATION] [-r REPOSITORY] [-t TOKEN] [-u USERNAME] [-p PASSWORD] [-l PULL_REQUEST_ID] [-c COMMAND] [-e EXTRAS]
+usage: python3 -m py-github-helper [-h] [-o ORGANIZATION] [-r REPOSITORY] [-t TOKEN] [-u USERNAME] [-p PASSWORD] [-l PULL_REQUEST_ID] [-c COMMAND] [-e EXTRAS]
 
 A python script that handles GitHub API calls.
 
@@ -80,7 +79,7 @@ optional arguments:
                         Extra dictionary to allow for more arguments.
 
 Expected Syntax:
-        py-github-helper -o <Organization Name> -r <Repository> -t <O-Auth Token> -u <Github username> -p <Github password> -l <PR Number> -c <Github API Command> -e '{"x": "sample", "y": 5, "z": "test}'
+        python3 -m py-github-helper -o <Organization Name> -r <Repository> -t <O-Auth Token> -u <Github username> -p <Github password> -l <PR Number> -c <Github API Command> -e '{"x": "sample", "y": 5, "z": "test}'
 
 Available Commands:
 
