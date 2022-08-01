@@ -3,8 +3,8 @@ Python Script for interacting with Github API.
 
 ## Example
 ```shell
-python3 helpers/make_api_call.py \
-        -t $GH_TOKEN -o org-not-included -r github_api -l 1 -c add_comment \
+python3 py-github-helper/make_api_call.py \
+        -t $GH_TOKEN -o org-not-included -r py-github-helper -l 1 -c add_comment \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
 
@@ -38,7 +38,7 @@ git push --set-upstream origin new_branch
 ![Generate PAT](img/generate_pat.gif)
 7. Test out the `make_api_call.py` script:
 ```text
-python3 helpers/make_api_call.py \
+python3 github_api/make_api_call.py \
         -t $MY_PAT -o $(git config user.name) -r sample-repo -l 1 -c add_comment \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
@@ -48,7 +48,7 @@ python3 helpers/make_api_call.py \
 
 ## Docs
 ```shell
-python3 helpers/make_api_call.py --help
+python3 py-github-helper/make_api_call.py --help
 ```
 
 
