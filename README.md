@@ -34,9 +34,9 @@ git add test.txt
 git commit -m "commit for demo purposes"
 git push --set-upstream origin new_branch
 ```
-5. Open a Pull request:
+5. Open a Pull request:  
 ![Open PR](img/open_pr.gif)
-6. Create a PAT (and save it somewhere):
+6. Create a PAT (and save it somewhere):  
 ![Generate PAT](img/generate_pat.gif)
 7. Test out `py-github-helper`:
 ```text
