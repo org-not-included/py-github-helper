@@ -1,6 +1,6 @@
 import logging
 import sys
-from utils.custom_arg_parser import parse_args
+from .utils.custom_arg_parser import parse_args
 
 
 def main(argv):
