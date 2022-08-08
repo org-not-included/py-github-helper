@@ -65,6 +65,27 @@ def get_pr_id_from_commit_id(
     logging.info(f"PR ID: {pr_id}")
     return pr_id
 
+def get_files_changed_during_pr(
+        organization,
+        repository,
+        pull_request_id,
+        token=None,
+        username=None,
+        password=None,
+        **kwargs,
+):
+    """Gets a pull_request id, by pulling PRs that include commit_id."""
+    headers = build_headers(token, username, password)
+    curr_endpoint = f"{base_url}/repos/{organization}/{repository}/pulls/{pull_request_id}/files"
+    logging.info(f"URL: {curr_endpoint}")
+    response = requests.get(curr_endpoint, headers=headers)
+    json_response = json.loads(response.text)
+    files = []
+    for file in json_response:
+        files.append(file['filename'])
+    logging.info(f"files: {files}")
+    return files
+
 
 def parse_commit_message_for_mentioned_pr(
         organization,

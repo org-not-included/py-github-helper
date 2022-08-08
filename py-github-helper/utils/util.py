@@ -38,6 +38,10 @@ available_commands = {
         "Parses for a Github issue titled 'Deploy Request: YYYY-MM-DD', and returns the associated issue id.",
         "Required parameters: organization, repository, token",
     ],
+    "get_files_changed_during_pr": [
+        "Gets a PR's details, and filters it for a list of file names",
+        "Required parameters: organization, repository, pull-request, token",
+    ],
     "get_pr_id_from_commit_id": [
         "Returns a PR number, for an associated commit SHA.",
         "Required parameters: organization, repository, token, extras[commit_id]",
