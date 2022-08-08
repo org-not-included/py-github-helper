@@ -62,6 +62,7 @@ def get_pr_id_from_commit_id(
     logging.info(f"URL: {curr_endpoint}")
     response = requests.get(curr_endpoint, headers=headers)
     pr_id = json.loads(response.text)[0]["number"]
+    logging.info(f"PR ID: {pr_id}")
     return pr_id
 
 
