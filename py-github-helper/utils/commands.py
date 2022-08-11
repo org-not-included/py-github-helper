@@ -77,7 +77,8 @@ def get_files_changed_during_pr(
     """Gets a pull_request id, by pulling PRs that include commit_id."""
     headers = build_headers(token, username, password)
     curr_endpoint = f"{base_url}/repos/{organization}/{repository}/pulls/{pull_request_id}/files"
-    logging.info(f"URL: {curr_endpoint}")
+    logging.error(f"URL: {curr_endpoint}")
+    logging.error(headers)
     response = requests.get(curr_endpoint, headers=headers)
     json_response = json.loads(response.text)
     files = []
