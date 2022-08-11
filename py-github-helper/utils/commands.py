@@ -81,6 +81,7 @@ def get_files_changed_during_pr(
     response = requests.get(curr_endpoint, headers=headers)
     json_response = json.loads(response.text)
     files = []
+    logging.error(json_response)
     for file in json_response:
         files.append(file['filename'])
     logging.info(f"files: {files}")
