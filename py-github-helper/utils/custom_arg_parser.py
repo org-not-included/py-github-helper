@@ -47,7 +47,7 @@ def parse_args(argv):
     )
 
     args = parser.parse_args()
-    validate_args(args)
+    args = validate_args(args)
 
     parameters = {**vars(args), **json.loads(args.extras)}
     pretty_params = "\n".join(

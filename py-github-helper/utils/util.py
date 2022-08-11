@@ -2,7 +2,6 @@ import argparse
 import json
 import re
 
-
 base_url = "https://api.github.com"
 
 available_commands = {
@@ -146,11 +145,15 @@ def validate_args(args):
         raise ValueError(
             "ERROR:\tOnly one form of authentication is required (either token or user/pass)."
         )
+    if not args.token and not args.username:
+        with open("secrets/gh_keyfile.json", "r") as gh_keyfile:
+            args.token = gh_keyfile.read()
 
     if not is_json(args.extras):
         raise ValueError(
             f'\n\nERROR:\tParamater "extras" is not formatted correctly. Incorrect syntax:\n\t{args.extras}'
         )
+    return args
 
 
 def parse_message_for_prs(message):
