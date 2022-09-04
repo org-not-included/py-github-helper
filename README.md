@@ -1,13 +1,41 @@
 # github_api
 Python Script for interacting with Github API.
+  
+---
+  
+## Example Comment:
+```text
+https://github.com/org-not-included/py-github-helper/pull/2#issuecomment-1236262158
+```
+  
+---
+  
+## Example Code Usage:
+```text
+from py_github_helper.utils.commands import add_comment
 
-## Example
+add_comment(
+    organization="org-not-included",
+    repository="py-github-helper",
+    pull_request_id="2",
+    message="This is an automated message via Github API",
+    token="my_github_token",
+    username="my_github_handle",
+    password=None,
+)
+```
+  
+---
+  
+## Example CLI Usage:
 ```shell
 python3 -m py-github-helper \
         -t $GH_TOKEN -o org-not-included -r sample-repo -l 1 -c add_comment \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
 
+---
+  
 ## Quick start
 1. Create a new [Github repo](https://github.com/new).
 2. Create a local folder and push it to the new repository:
@@ -45,15 +73,16 @@ python3 -m py-github-helper \
         -e '{"message": "This message was successfully posted via gitub_api."}'
 ```
 ![Comment on PR](img/pr_comment.png)
-
+  
 ---
-
+  
 ## Docs
 ```shell
 python3 -m py-github-helper --help
 ```
-
-
+  
+---  
+  
 ```text
 usage: python3 -m py-github-helper [-h] [-o ORGANIZATION] [-r REPOSITORY] [-t TOKEN] [-u USERNAME] [-p PASSWORD] [-l PULL_REQUEST_ID] [-c COMMAND] [-e EXTRAS]
 

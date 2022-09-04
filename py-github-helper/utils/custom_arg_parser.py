@@ -1,7 +1,7 @@
 from .commands import *
 
 
-def parse_args(argv):
+def parse_args():
     """
     Parses input arguments and formats parameters for generating specified command (API request).
 
