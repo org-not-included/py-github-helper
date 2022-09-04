@@ -20,7 +20,7 @@ add_comment(
     pull_request_id="2",
     message="This is an automated message via Github API",
     token="my_github_token",
-    username="my_github_handle",
+    username=None,
     password=None,
 )
 ```
@@ -30,8 +30,8 @@ add_comment(
 ## Example CLI Usage:
 ```shell
 python3 -m py-github-helper \
-        -t $GH_TOKEN -o org-not-included -r sample-repo -l 1 -c add_comment \
-        -e '{"message": "This message was successfully posted via gitub_api."}'
+        -t $GH_TOKEN -o org-not-included -r py-github-helper -l 2 -c add_comment \
+        -e '{"message": "This is an automated message via Github API"}'
 ```
 
 ---
