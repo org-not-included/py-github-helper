@@ -145,11 +145,11 @@ pip install py-github-helper
 ```
 4. Create a new branch (and push it to Github):
 ```text
-git checkout -b new_branch
+git checkout -b my_new_branch
 echo "some sample text" > test.txt
 git add test.txt
 git commit -m "commit for demo purposes"
-git push --set-upstream origin new_branch
+git push --set-upstream origin my_new_branch
 ```
 5. Open a Pull request:  
 ![Open PR](img/open_pr.gif)
