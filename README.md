@@ -124,9 +124,9 @@ Available Commands:
   
 ---
   
-## Quick start 
-### Creating a new Repository
-1. Create a new [Github repo](https://github.com/new).
+# Quick start (4 Steps)
+### (1/4) Creating a new Repository
+1. Create a new [Github repo](https://github.com/new)
 2. Create a local folder and push it to the new repository:
 ```
 mkdir sample-repo
@@ -139,11 +139,11 @@ git branch -M main
 git remote add origin https://github.com/$(git config user.name)/sample-repo.git
 git push -u origin main 
 ```
-3. Install this PyPi package:
-```
-pip install py-github-helper
-```
-4. Create a new branch (and push it to Github):
+  
+--- 
+  
+### (2/4) Creating a new Pull Request
+1. Create a new branch (and push it to Github):
 ```text
 git checkout -b my_new_branch
 echo "some sample text" > test.txt
@@ -151,12 +151,25 @@ git add test.txt
 git commit -m "commit for demo purposes"
 git push --set-upstream origin my_new_branch
 ```
-5. Open a Pull request:  
-![Open PR](img/open_pr.gif)
-### Create a Github Personal Access Token (PAT)
-1. Create a PAT (and save it somewhere):  
+2. Open a Pull request in Github UI:  
+![Open PR](img/open_pr.gif)  
+  
+---
+  
+### (3/4) Create a Github Personal Access Token (PAT)  
+1. Create a PAT in Github UI
+2. Save the PAT somewhere  
+  
 ![Generate PAT](img/generate_pat.gif)
-2. Test out `py-github-helper`:
+  
+---
+  
+### (4/4) Use py-github-helper to Post a Comment
+1. Install the PyPi package:
+```
+pip install py-github-helper
+```
+2. Test out the CLI command:
 ```text
 python3 -m py-github-helper \
         -t $MY_PAT -o $(git config user.name) -r sample-repo -l 1 -c add_comment \
