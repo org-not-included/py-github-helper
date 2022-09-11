@@ -1,8 +1,21 @@
 # github_api
 Python Script for interacting with Github API.
-  
----
-  
+  ---  
+Release Details:  
+![PyPI version](https://badge.fury.io/py/py-github-helper.svg)
+![Build Status](https://github.com/org-not-included/py-github-helper/actions/workflows/python-publish.yml/badge.svg?branch=main)
+![Codacy Badge](https://app.codacy.com/project/badge/Grade/46c0f84437414b9dba4de7f488973b51)
+  --- 
+Repo Details:  
+![GitHub last commit](https://img.shields.io/github/last-commit/org-not-included/py-github-helper.svg?color=aqua)
+![GitHub issues](https://img.shields.io/github/issues/org-not-included/py-github-helper.svg?color=orange)
+![GitHub forks](https://img.shields.io/github/forks/org-not-included/py-github-helper.svg?color=purple)
+![GitHub stars](https://img.shields.io/github/stars/org-not-included/py-github-helper.svg?color=yellow)
+![GitHub license](https://img.shields.io/github/license/org-not-included/py-github-helper.svg?color=blue)
+  ---  
+Social Media:  
+[![Twitter](https://img.shields.io/twitter/url?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Forg-not-included%2Fpy-github-helper%2F)
+  ---  
 ## Example Code Usage:
 ```text
 from py_github_helper.utils.commands import add_comment
