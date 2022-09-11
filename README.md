@@ -1,4 +1,7 @@
 # github_api
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dbccd036313b45d7b8812613c52d8882)](https://app.codacy.com/gh/org-not-included/py-github-helper?utm_source=github.com&utm_medium=referral&utm_content=org-not-included/py-github-helper&utm_campaign=Badge_Grade_Settings)
+
 Python Script for interacting with Github API.
   
 ---
