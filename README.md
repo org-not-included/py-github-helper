@@ -3,7 +3,7 @@ Python Script for interacting with Github API.
   ---  
 Release Details:  
 ![PyPI version](https://badge.fury.io/py/py-github-helper.svg)
-![Build Status](https://github.com/org-not-included/py-github-helper/actions/workflows/python-publish.yml/badge.svg?branch=main)
+![Build Status](https://github.com/org-not-included/py-github-helper/actions/workflows/python-publish.yml/badge.svg)
 ![Codacy Badge](https://app.codacy.com/project/badge/Grade/46c0f84437414b9dba4de7f488973b51)
   --- 
 Repo Details:  
