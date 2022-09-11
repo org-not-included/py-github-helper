@@ -1,22 +1,22 @@
-# github_api
-Python Script for interacting with Github API.
-  ---  
-Release Details:  
-![PyPI version](https://badge.fury.io/py/py-github-helper.svg)
-![Build Status](https://github.com/org-not-included/py-github-helper/actions/workflows/python-publish.yml/badge.svg)
-![Codacy Badge](https://app.codacy.com/project/badge/Grade/46c0f84437414b9dba4de7f488973b51)
-  --- 
-Repo Details:  
-![GitHub last commit](https://img.shields.io/github/last-commit/org-not-included/py-github-helper.svg?color=aqua)
-![GitHub issues](https://img.shields.io/github/issues/org-not-included/py-github-helper.svg?color=orange)
-![GitHub forks](https://img.shields.io/github/forks/org-not-included/py-github-helper.svg?color=purple)
-![GitHub stars](https://img.shields.io/github/stars/org-not-included/py-github-helper.svg?color=yellow)
-![GitHub license](https://img.shields.io/github/license/org-not-included/py-github-helper.svg?color=blue)
-  ---  
-Social Media:  
-[![Twitter](https://img.shields.io/twitter/url?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Forg-not-included%2Fpy-github-helper%2F)
-  ---  
-## Example Code Usage:
+# py-github-helper  
+  
+##### Python Script for interacting with Github API.  
+
+[![PyPI version](https://badge.fury.io/py/py-github-helper.svg)](https://pypi.org/project/py-github-helper/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/46c0f84437414b9dba4de7f488973b51)](https://www.codacy.com/gh/org-not-included/py-github-helper/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=org-not-included/py-github-helper&amp;utm_campaign=Badge_Grade)
+[![GitHub license](https://img.shields.io/github/license/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/blob/main/LICENSE)  
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/issues)
+[![GitHub contributors](https://img.shields.io/github/contributors/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/graphs/contributors)  
+[![GitHub Release Date](https://img.shields.io/github/release-date/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/commits/main)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/graphs/commit-activity)  
+[![GitHub forks](https://img.shields.io/github/forks/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/network)
+[![GitHub stars](https://img.shields.io/github/stars/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/watchers)
+[![Twitter Follow](https://img.shields.io/twitter/follow/OrgNotIncluded?style=flat)](https://twitter.com/intent/follow?screen_name=OrgNotIncluded)  
+---  
+### Example Code Usage:
 ```text
 from py_github_helper.utils.commands import add_comment
 
@@ -33,7 +33,7 @@ add_comment(
   
 ---
   
-## Example CLI Usage:
+### Example CLI Usage:
 ```shell
 python3 -m py-github-helper \
         -t $GH_TOKEN -o org-not-included -r py-github-helper -l 2 -c add_comment \
@@ -42,14 +42,14 @@ python3 -m py-github-helper \
   
 ---  
   
-## Example Comment:
+### Example Comment:
 ```text
 https://github.com/org-not-included/py-github-helper/pull/2#issuecomment-1236262158
 ```
   
 ---  
   
-## Docs
+### Docs
 ```shell
 python3 -m py-github-helper --help
 ```
@@ -137,7 +137,7 @@ Available Commands:
   
 ---
   
-# Quick start (4 Steps)
+## Quick start (4 Steps)
 ### (1/4) Creating a new Repository
 1. Create a new [Github repo](https://github.com/new)
 2. Create a local folder and push it to the new repository:
