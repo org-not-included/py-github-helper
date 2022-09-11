@@ -3,7 +3,8 @@
 ##### Python Script for interacting with Github API.  
 
 [![PyPI version](https://badge.fury.io/py/py-github-helper.svg)](https://pypi.org/project/py-github-helper/)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/46c0f84437414b9dba4de7f488973b51)](https://www.codacy.com/gh/org-not-included/py-github-helper/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=org-not-included/py-github-helper&amp;utm_campaign=Badge_Grade)
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/org-not-included/py-github-helper/main)](https://www.codefactor.io/repository/github/org-not-included/py-github-helper)
+[![GitHub languages](https://img.shields.io/github/languages/top/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/)
 [![GitHub license](https://img.shields.io/github/license/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/blob/main/LICENSE)  
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/pulls)
 [![GitHub issues](https://img.shields.io/github/issues/org-not-included/py-github-helper)](https://github.com/org-not-included/py-github-helper/issues)
