@@ -1,5 +1,17 @@
 from .commands import *
 
+def get_logging_level():
+    import argparse
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("-v", "--verbose")
+    parser.add_argument("-vv", "--debug", "--very_verbose")
+    args, _ = parser.parse_known_args()
+    if args.debug or args.very_verbose:
+        return logging.DEBUG
+    elif args.verbose:
+        return logging.INFO
+    else:
+        return logging.ERROR
 
 def parse_args():
     """
@@ -45,6 +57,12 @@ def parse_args():
     parser.add_argument(
         "-e", "--extras", type=str, help="Extra dictionary to allow for more arguments."
     )
+    parser.add_argument(
+        "-v", "--verbose", help="Enable verbose logging (INFO level). Default is ERROR level.",
+    )
+    parser.add_argument(
+        "-vv", "--debug", "--very_verbose", help="Enable verbose logging (DEBUG level). Default is ERROR level.",
+    )
 
     args = parser.parse_args()
     args = validate_args(args)
@@ -53,6 +71,8 @@ def parse_args():
     pretty_params = "\n".join(
         [f"{key:<20} {value}" for key, value in parameters.items()]
     )
+    log_level = get_logging_level()
+    logging.basicConfig(format="%(levelname)s: %(message)s", level=log_level)
     logging.info(f"\n\nParsed Parameters:\n{pretty_params}")
     logging.info("\n\n\n")
 
