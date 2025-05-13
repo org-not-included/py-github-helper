@@ -63,7 +63,7 @@ usage: python3 -m py-github-helper [-h] [-o ORGANIZATION] [-r REPOSITORY] [-t TO
 A python script that handles GitHub API calls.
 
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            show this help message and exit.
   -o ORGANIZATION, --organization ORGANIZATION
                         Owner of GitHub repository.
   -r REPOSITORY, --repository REPOSITORY
@@ -80,6 +80,10 @@ optional arguments:
                         Name of python function associated with API call being made.
   -e EXTRAS, --extras EXTRAS
                         Extra dictionary to allow for more arguments.
+  -v, --verbose 
+                        Log all INFO level messages to console.
+  -vv --debug, --very_verbose
+                        Log all DEBUG level messages to console.
 
 Expected Syntax:
         python3 -m py-github-helper -o <Organization Name> -r <Repository> -t <O-Auth Token> -u <Github username> -p <Github password> -l <PR Number> -c <Github API Command> -e '{"x": "sample", "y": 5, "z": "test}'
