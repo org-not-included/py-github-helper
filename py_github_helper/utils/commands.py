@@ -157,12 +157,10 @@ def add_comment(
     if "filename" in kwargs:
         with open(kwargs["filename"], "r") as file:
             message = f"{message}\n\n\n{file.read()}"
-    logging.info(
-        f"Adding comment for PR #{pull_request_id}...\n\tComment:\n\t'{message}' "
-    )
-    print(f"URL: {curr_endpoint}")
-    print(f"headers: {headers}")
-    print(f"body: {message}")
+    logging.info(f"Adding comment for PR #{pull_request_id}...\n\tComment:\n\t'{message}' ")
+    logging.debug(f"URL: {curr_endpoint}")
+    logging.debug(f"headers: {headers}")
+    logging.debug(f"body: {message}")
     response = requests.post(
         curr_endpoint, headers=headers, data=json.dumps({"body": message})
     )
